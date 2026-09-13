@@ -1,100 +1,126 @@
 
 .explore-text {
     max-width: 1000px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 10px 0 30px;
     display: flex;
     flex-direction: column;
-    /* margin: 0 0 30px; */
-    padding-bottom: 30px;
-  }
-  
-  .explore-text h1 {
+}
+
+.explore-text h1 {
     margin: 0 0 8px;
     font-size: 30px;
     font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.8px;
     color: #171b2b;
-  }
-  .explore-text h1 {
-    margin: 0 0 5px;
-  }
-  
-  .explore-text h1 span {
-    color: #d04ca8;
-  }
-  
-  .explore-text p {
+}
+
+.explore-text h1 span {
+    color: hsl(318, 58%, 56%);
+}
+
+.explore-text p {
     margin: 0;
     color: #7f8ca3;
     font-size: 14px;
-  }
-   .prant-css {
+    line-height: 1.6;
+}
+
+
+
+
+.prant-css {
     max-width: 1000px;
-    margin: auto;
-  
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
+    gap: 28px;
     align-items: start;
-  }
-  
-  .left {
+}
+
+.left {
     grid-column: span 9;
     min-width: 0;
-  }
-  
-  .right {
+}
+
+.right {
     grid-column: span 3;
     min-width: 0;
-  }
-  
-  .technology-container {
+}
+
+
+
+.technology-container {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
-    align-items: start;
-  }
+    align-items: stretch;
+}
 
 .technology-card {
-    border: 1px solid #eeeaf1;
-    border-radius: 14px;
-    padding: 16px;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  
-    max-width: 1000px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
     height: 100%;
-    margin: auto;
-  
+    padding: 18px;
     box-sizing: border-box;
-  }
+
+    background: #ffffff;
+    border: 1px solid #eeeaf1;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 16px rgba(23, 27, 43, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.technology-card:hover {
+    transform: translateY(-4px);
+    border-color: #e5d6e9;
+    box-shadow: 0 12px 28px rgba(23, 27, 43, 0.09);
+}
+
+
 
 
 .card-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
 
 
 
 
 .technology-icon {
-    width: 42px;
-    height: 42px;
-
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 
+    background: #faf8fc;
     border: 1px solid #eeeaf1;
-    border-radius: 9px;
-    background: #faf9fb;
+    border-radius: 11px;
+
+    transition: background 0.25s ease;
+}
+
+.technology-card:hover .technology-icon {
+    background: #f8eef8;
 }
 
 .technology-icon img {
-    width: 27px;
-    height: 27px;
+    width: 28px;
+    height: 28px;
     object-fit: contain;
 }
 
@@ -102,39 +128,44 @@
 
 
 .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 10px;
+    border-radius: 20px;
+
     background: #eff8ff;
     color: #1685d1;
 
-    padding: 5px 9px;
-    border-radius: 15px;
-
     font-size: 9px;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 
 
 
 .technology-card h3 {
+    margin: 16px 0 7px;
+
     font-family: "Space Grotesk", sans-serif;
-
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
     color: #20202b;
-
-    margin: 14px 0 6px;
 }
 
 
 
+
 .description {
-    color: #817c87;
-
-    font-size: 10px;
-    line-height: 1.55;
-
     margin: 0;
-
     min-height: 48px;
+
+    color: #817c87;
+    font-size: 10px;
+    line-height: 1.7;
 }
 
 
@@ -144,21 +175,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
 
-    gap: 15px;
-
-    margin: 12px 0;
+    margin: 16px 0 14px;
 }
 
 
 
+
 .category {
+    padding: 5px 9px;
+    border-radius: 6px;
+
     background: #f3f1f6;
-
-    padding: 4px 8px;
-
-    border-radius: 5px;
-
     color: #625d6c;
 
     font-size: 8px;
@@ -178,12 +208,9 @@
 
 .card-bottom {
     display: flex;
-    align-items: center;
-
-    justify-content: center;
-
-    margin-top: 4px;
-
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
 }
 
 
@@ -191,8 +218,7 @@
 
 .rating {
     color: #4c4754;
-
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 600;
 }
 
@@ -202,173 +228,80 @@
 
 
 
+
 .add-button,
 .added-button {
     width: 100%;
     height: 40px;
+
+    padding: 8px 12px;
     border: 1px solid #e3dfe8;
+    border-radius: 8px;
 
     background: #171b2b;
-    color: white;
+    color: #ffffff;
 
-    border-radius: 6px;
-
-    padding: 7px 9px;
-
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 600;
-
     cursor: pointer;
+    /* USE AI */
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        border-color 0.2s ease;
 }
 
+.add-button:hover {
+    background: #2d3450;
+    border-color: #2d3450;
+}
+
+.add-button:active {
+    transform: scale(0.98);
+}
+
+.added-button,
 .affter_add {
     background: #f5f4f6;
     color: #99939f;
     border-color: #e3dfe8;
 }
 
-
-/* Added Button */
-
-.added-button {
-    background: #f5f4f6;
-    color: #99939f;
+.added-button:hover,
+.affter_add:hover {
+    background: #eceaf0;
+    color: #777282;
 }
 
-/* Mobile Responsive */
-
-/* =========================================
-   MOBILE RESPONSIVE
-========================================= */
-
-@media (max-width: 768px) {
-
-    /* Main 12 column grid mobile এ 1 column হবে */
-    .prant-css {
-        width: 100%;
-
-        display: flex;
-        flex-direction: column;
-
-        gap: 25px;
-
-        padding: 0 20px;
-
-        box-sizing: border-box;
-    }
 
 
-    /* Technology section */
-    .left {
-        width: 100%;
-
-        grid-column: auto;
-    }
-
-
-    /* Your Stack section */
-    .right {
-        width: 100%;
-
-        grid-column: auto;
-
-        order: 2;
-    }
-
-
-    /* Technology cards */
-    .technology-container {
-        width: 100%;
-
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-    }
-
-
-    /* Single technology card */
-    .technology-card {
-        width: 100%;
-
-        margin: 0;
-
-        padding: 16px;
-
-        box-sizing: border-box;
-    }
-
-
-    /* Your Stack */
-    .my-stack {
-        width: 100%;
-
-        max-width: none;
-
-        margin: 0;
-
-        padding: 20px;
-
-        box-sizing: border-box;
-    }
-
-
-    /* Stack item */
-    .stack-item {
-        width: 100%;
-
-        height: 48px;
-    }
-
-
-    /* Empty stack */
-    .empty-stack {
-        width: 100%;
-
-        height: 66px;
-    }
-
-
-    /* Remove All */
-    .remove-all {
-        width: 100%;
-
-        margin-top: 20px;
-    }
-
-}
-
-/* ================= Your Stack ================= */
 
 .my-stack {
     width: 100%;
     max-width: 520px;
-
     margin: 0 auto 35px;
     padding: 22px;
+    box-sizing: border-box;
 
     background: #ffffff;
+    border: 1px solid #eeeaf1;
+    border-radius: 16px;
 
-    border: 1px solid #eeeeee;
-    border-radius: 15px;
-
-    box-sizing: border-box;
+    box-shadow: 0 4px 16px rgba(23, 27, 43, 0.04);
 }
 
 
-/* Header */
+
 
 .stack-header {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 .stack-header h2 {
-    margin: 0 0 5px;
+    margin: 0 0 6px;
 
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
-
     color: #151827;
 }
 
@@ -376,174 +309,261 @@
     margin: 0;
 
     font-size: 11px;
-
+    line-height: 1.5;
     color: #9ba1b5;
 }
 
 
-/* List */
+
 
 .stack-list {
     display: flex;
-
     flex-direction: column;
-
-    gap: 7px;
+    gap: 9px;
 }
 
 
-/* Empty Stack */
+
 
 .empty-stack {
     width: 100%;
-    height: 66px;
-
+    min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 
     border: 1px dashed #dfe4ee;
-
     border-radius: 10px;
 
+    background: #fcfcfd;
     color: #9ba8bd;
-
     font-size: 11px;
-
-    box-sizing: border-box;
 }
 
 
-/* Stack Item */
+
 
 .stack-item {
     width: 100%;
-    height: 48px;
-
-    padding: 0 10px 0 12px;
+    min-height: 52px;
+    padding: 8px 10px 8px 12px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
+    box-sizing: border-box;
 
     background: #ffffff;
+    border: 1px solid #e5e7ee;
+    border-radius: 10px;
+    /* use ai to Make good  */
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
 
-    border: 1px solid #dfe4ee;
-
-    border-radius: 8px;
-
-    box-sizing: border-box;
+.stack-item:hover {
+    background: #faf9fc;
+    border-color: #dcd4e5;
 }
 
 
-/* Left Side */
+
 
 .stack-left {
     display: flex;
-
     align-items: center;
-
     gap: 10px;
+    min-width: 0;
 }
 
 
-/* Icon */
+
 
 .stack-icon {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    background: #faf9fb;
 }
 
 .stack-icon img {
-    width: 27px;
-    height: 27px;
-
+    width: 26px;
+    height: 26px;
     object-fit: contain;
 }
 
 
-/* Text */
+
+
+.stack-info {
+    min-width: 0;
+}
 
 .stack-info h4 {
-    margin: 0 0 2px;
+    margin: 0 0 3px;
 
     font-size: 10px;
-
     font-weight: 700;
-
     color: #172033;
 }
 
 .stack-info p {
     margin: 0;
 
-    font-size: 7px;
-
+    font-size: 8px;
     color: #8e96a8;
 }
 
 
-/* X Button */
+
 
 .remove-button {
-    width: 25px;
-    height: 25px;
-
+    width: 28px;
+    height: 28px;
     padding: 0;
-
-    border: none;
-
-    background: transparent;
-
-    color: #91a0b5;
-
-    font-size: 25px;
-
-    font-weight: 300;
-
-    line-height: 1;
+    flex-shrink: 0;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: #91a0b5;
+
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1;
     cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
 }
 
 .remove-button:hover {
-    color: #5d6b80;
+    color: #ef4b4b;
+    background: #fff1f1;
 }
 
 
-/* Remove All */
+
 
 .remove-all {
     width: 100%;
-    height: 31px;
+    height: 36px;
 
-    margin-top: 47px;
+    margin-top: 24px;
+    padding: 8px 12px;
 
-    border: 1px solid #ffaaaa;
-
-    border-radius: 7px;
+    border: 1px solid #ffbebe;
+    border-radius: 8px;
 
     background: #ffffff;
-
     color: #ef4b4b;
 
-    font-size: 11px;
-
+    font-size: 10px;
     font-weight: 600;
-
     cursor: pointer;
+    /* use ai to make good design */
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .remove-all:hover {
-    background: #fff6f6;
+    background: #fff5f5;
+    border-color: #ff9999;
 }
+
+
+
+
+@media (max-width: 768px) {
+
+    .explore-text {
+        padding: 10px 20px 25px;
+    }
+
+    .explore-text h1 {
+        font-size: 26px;
+    }
+
+    .explore-text p {
+        font-size: 13px;
+    }
+
+    .prant-css {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        grid-column: auto;
+    }
+
+    .technology-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .technology-card {
+        width: 100%;
+        padding: 18px;
+        margin: 0;
+    }
+
+    .technology-card h3 {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 11px;
+        min-height: auto;
+    }
+
+    .card-info {
+        margin: 14px 0;
+    }
+
+    .my-stack {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .stack-item {
+        min-height: 52px;
+    }
+
+    .empty-stack {
+        min-height: 70px;
+    }
+
+    .remove-all {
+        margin-top: 24px;
+    }
+}
+
+.technology-card.card-added {
+    border: 2px solid #d04ca8;
+    background-color: white;
+  }
+  

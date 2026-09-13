@@ -14,7 +14,7 @@
         <img className='logo' src={logo} alt="" />
         <div className="nav-menu">
         <a href="#home">Home</a>
-          <a href="#technologies">Technologies</a>
+          <a href="#tecno">Technologies</a>
           <a href="#projects">Projects</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
