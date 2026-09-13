@@ -1,0 +1,131 @@
+/* Hero CSS */
+
+.hero {
+    width: 90%;
+    max-width: 1180px;
+    min-height: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 50px 0;
+  }
+  
+  .hero-text {
+    width: 55%;
+  }
+  .gradient-text {
+    background: linear-gradient(
+      to right,
+      #ff4b16,
+      #e52b55,
+      #a832c4
+    );
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .small-title {
+    color: #ff3d81;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+  }
+  
+  .hero h1 {
+    font-family: "Space Grotesk";
+    font-size: 55px;
+    line-height: 1.05;
+    margin: 12px 0;
+    color: #111827;
+  }
+  
+  .hero h1 span {
+    color: #ff3d81;
+   
+  }
+  
+  .hero-description {
+    color: var(--gray);
+    line-height: 1.7;
+    max-width: 520px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+  }
+  
+  .main-button,
+  .learn-button {
+    padding: 13px 18px;
+    border-radius: 9px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .main-button {
+    color: white;
+    background-color: #e52b55;
+    text-decoration: none;
+  }
+  
+  .learn-button {
+    border: 1px solid #ddd9e2;
+    color: #5d5867;
+  }
+  
+  .hero-image {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .hero-image img {
+    width: 420px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .circle {
+    width: 270px;
+    height: 270px;
+    background: #f5efff;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  @media (max-width: 750px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-text,
+    .hero-image {
+      width: 100%;
+    }
+  
+    .hero h1 {
+      font-size: 40px;
+    }
+  
+    .hero-description {
+      margin: auto;
+    }
+  
+    .hero-buttons {
+      justify-content: center;
+    }
+  
+    .hero-image img {
+      width: 620px;
+      margin: -90px;
+    }
+  }
+  
