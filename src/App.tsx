@@ -6,6 +6,7 @@ import Tecno from './components/Tecno'
 import { Suspense } from "react";
 import type { Technology } from './type/tecnoType';
 import './App.css'
+import Footer from './components/Footer';
 const comPromise = async():Promise<Technology[]>=>{
   const res = await fetch('./data.json');
   const data= await res.json();
@@ -22,6 +23,7 @@ function App() {
             <Suspense fallback={<h1>Data Loading....</h1>}>
             <Tecno comPromise={comPromise()}></Tecno>
             </Suspense>
+            <Footer></Footer>
            
     </>
   )

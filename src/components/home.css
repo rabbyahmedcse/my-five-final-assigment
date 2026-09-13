@@ -10,6 +10,9 @@
     justify-content: space-between;
     gap: 30px;
     padding: 50px 0;
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
   }
   
   .hero-text {
@@ -22,7 +25,7 @@
       #e52b55,
       #a832c4
     );
-  
+  /* explor design */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -89,16 +92,16 @@
   .hero-image img {
     width: 420px;
     position: relative;
-    z-index: 1;
+    z-index: 0;
   }
   
-  .circle {
+  /* .circle {
     width: 270px;
     height: 270px;
     background: #f5efff;
     border-radius: 50%;
     position: absolute;
-  }
+  } */
   
   @media (max-width: 750px) {
     .hero {

@@ -28,7 +28,7 @@ const Home = () => {
         </div>
   
         <div className="hero-image">
-          <div className="circle"></div>
+         
           <img src={img} alt="Development stack" />
         </div>
       </section>
